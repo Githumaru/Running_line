@@ -28,7 +28,7 @@ def my_video_view(request):
     description = request.POST.get('description')
 
 
-    client = MongoClient('mongodb+srv://Nanashi:trofiprofi@cluster0.uhithpw.mongodb.net/')
+    client = MongoClient('mongodb://localhost:27017/')
 
     db = client['datatest']
 
