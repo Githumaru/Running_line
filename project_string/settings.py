@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'datatest',
         'CLIENT': {
-            'host': 'mongodb+srv://Nanashi:trofiprofi@cluster0.uhithpw.mongodb.net/',
+            'host': 'mongodb://localhost:27017/',
         },
         'ATOMIC_REQUESTS': True,
         'AUTOCOMMIT': True,
