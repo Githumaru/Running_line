@@ -21,7 +21,8 @@ def my_video_view(request):
     
     # Get the text from the GET request parameter
     text = request.GET.get('text', '') 
-    k = len(text) * 8
+    text_width = font.getsize(text)[0]
+    k = text_width + 5
     fps = len(text) * 3
     
     # Load the font
@@ -52,7 +53,7 @@ def my_video_view(request):
     # Generate each frame of the video
     for t in np.linspace(0, duration, int(duration * fps), endpoint=False):
         frame = np.copy(canvas)
-        start_x = int(t * (-k) / duration) + 20
+        start_x = int(t * (-k) / duration) + 70
         start_y = int(height / 2) - 10
         frame = Image.fromarray(frame)
         draw = ImageDraw.Draw(frame)
